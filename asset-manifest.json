@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/ealborn/job-list/static/css/main.b6ade0db.css",
-    "main.js": "/ealborn/job-list/static/js/main.d0bd83a3.js",
-    "index.html": "/ealborn/job-list/index.html",
-    "main.b6ade0db.css.map": "/ealborn/job-list/static/css/main.b6ade0db.css.map",
-    "main.d0bd83a3.js.map": "/ealborn/job-list/static/js/main.d0bd83a3.js.map"
+    "main.css": "/job-list/static/css/main.b6ade0db.css",
+    "main.js": "/job-list/static/js/main.d0bd83a3.js",
+    "index.html": "/job-list/index.html",
+    "main.b6ade0db.css.map": "/job-list/static/css/main.b6ade0db.css.map",
+    "main.d0bd83a3.js.map": "/job-list/static/js/main.d0bd83a3.js.map"
   },
   "entrypoints": [
     "static/css/main.b6ade0db.css",
