@@ -1,38 +1,416 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #e9f3ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 1.5em;
+  color: #494949;
+  margin: 0.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: #494949;
+  margin-top: 0;
+  font-size: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  color: #494949;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.jobList {
+  display: flex;
+  background-color: #e9f3ff;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0
+}
+
+.ad-wrapper {
+  display: flex;
+  border: 1px solid #b7cad8;
+  flex-direction: column;
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 800px;
+  border-radius: 15px;
+  background: #edf5ff;
+  box-shadow: 20px 20px 40px #e1e9f2,
+    -15px -15px 25px #f9ffff;
+}
+
+.ad-top {
+  display: flex;
+  flex-direction: row;
+}
+
+.ad-top-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-top img {
+  display: flex;
+  height: 4.5em;
+  margin-right: 1em;
+}
+
+.ad-second-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-second-row p {
+  font-size: 0.75em;
+}
+
+.ad-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0;
+  margin: 0 4.5em
+}
+
+.showMore {
+  border-top: 1px solid #a0c3d4;
+  border-bottom: 1px solid #7798b4;
+  border-left: 1px solid #b8d5ee;
+  border-right: 1px solid #a1bdd0;
+  background: #d5e9ff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: #a4c5dc 1px 2px 5px 0px;
+  color: #494949;
+  font-size: 15px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.showMore:hover {
+  background: #2671d1;
+  color: #ecf5ff;
+}
+
+.showMore:active {
+  background: #2dabff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.viewLink {
+  border: 1px solid #b6c9ff;
+  background: #169fe3;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: #a4c5dc 1px 2px 5px 0px;
+  color: #ecf5ff;
+  font-size: 15px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  margin: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.viewLink:hover {
+  background: #2671d1;
+  color: #ecf5ff;
+}
+
+.viewLink:active {
+  background: #2dabff;
+  color: white;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+ul {
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 1536px) {
+  .ad-wrapper {
+    width: 900px;
+    padding: 2em;
+    margin-bottom: 1.5em;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    padding-top: 0.5em;
+    font-size: 1.5em;
+  }
+
+  .ad-top img {
+    height: 8em;
+    margin-right: 2em;
+  }
+
+  .ad-second-row p {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
+
+  .ad-content {
+    margin: 0 4em;
+  }
+
+  .ad-content div div {
+    font-size: 1.5em;
+  }
+
+  .showMore {
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .viewLink {
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 1em;
+    margin: 0.75em;
+  }
+
+  .button-wrap {
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .showMore {
+    padding: 10px 18px;
+    border-radius: 18px;
+    font-size: 18px;
+  }
+
+  .viewLink {
+    padding: 10px 18px;
+    border-radius: 18px;
+    font-size: 18px;
+    margin: 0.75em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ad-wrapper {
+    width: 755px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .ad-wrapper {
+    width: 500px;
+  }
+
+  .ad-content {
+    margin: 0 2em;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .ad-wrapper {
+    width: 385px;
+  }
+
+  .ad-content {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    padding-top: 5px;
+    font-size: 16px;
+  }
+
+  .ad-top img {
+    height: 4em;
+    margin-right: 10px;
+  }
+
+  .ad-second-row p {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .showMore {
+    padding: 7px 8px;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  .button-wrap {
+    padding: 7px 8px;
+    border-radius: 7px;
+    margin: 0;
+  }
+
+  .viewLink {
+    padding: 7px 8px;
+    border-radius: 7px;
+    margin: 3px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .ad-wrapper {
+    width: 350px;
+  }
+
+  .ad-content {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 14px;
+  }
+
+  h2 {
+    padding-top: 5px;
+    font-size: 11px;
+  }
+
+  .ad-top img {
+    height: 4em;
+    margin-right: 10px;
+  }
+
+  .ad-second-row p {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .showMore {
+    padding: 7px 8px;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  .button-wrap {
+    padding: 7px 8px;
+    border-radius: 7px;
+    margin: 0;
+  }
+
+  .viewLink {
+    padding: 7px 8px;
+    border-radius: 7px;
+    margin: 3px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .ad-wrapper {
+    width: 280px;
+  }
+
+  .ad-content {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 14px;
+  }
+
+  h2 {
+    padding-top: 5px;
+    font-size: 11px;
+  }
+
+  .ad-top img {
+    height: 4em;
+    margin-right: 10px;
+  }
+
+  .ad-second-row p {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .showMore {
+    padding: 7px 8px;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  .button-wrap {
+    padding: 7px 8px;
+    border-radius: 7px;
+    margin: 0;
+  }
+
+  .viewLink {
+    padding: 7px 8px;
+    border-radius: 7px;
+    margin: 3px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .ad-wrapper {
+    width: 280px;
+  }
+
+  .ad-content {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 14px;
+  }
+
+  h2 {
+    padding-top: 5px;
+    font-size: 11px;
+  }
+
+  .ad-top img {
+    height: 4em;
+    margin-right: 10px;
+  }
+
+  .ad-second-row p {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .showMore {
+    padding: 7px 8px;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  .button-wrap {
+    padding: 7px 8px;
+    border-radius: 7px;
+    margin: 0;
+  }
+
+  .viewLink {
+    padding: 7px 8px;
+    border-radius: 7px;
+    margin: 3px;
   }
 }
